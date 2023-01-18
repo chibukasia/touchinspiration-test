@@ -13,7 +13,7 @@
  ## Challenges
 - The requirements needs to use redux, which I'm familiar with but not quite conversant with it. I have some previous knowledge about `REDUX` but stopped using it some times back after reading many blogs that prefer `useState` hook or `useContext`. I can still however leaern it in a day if it used at the organization.
 - The endpoint for the `PATCH` operation seems to have an issue but the updates works. It only needs the users to refresh the page to see the changes
-`[Users](./src/images/users.png)`
-`[Pagination](./src/images/pagination.png`
-`[User Details](./src/images/user_details.png)`
-`[Updated User](./src/images/updated_user.png)`
+![Users](./src/images/users.png)
+![Pagination](./src/images/pagination.png
+![User Details](./src/images/user_details.png)
+![Updated User](./src/images/updated_user.png)
