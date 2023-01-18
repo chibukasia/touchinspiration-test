@@ -1,23 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useState, useEffect} from 'react';
+import Home from './components/Home';
+import { Routes, Route } from 'react-router-dom';
+import UserDetails from './components/UserDetails';
 
 function App() {
+  // Set the states 
+  const [users, setUsers] = useState([])
+
+  // GET all the users 
+  useEffect(()=>{
+    fetch('https://us-central1-ti-reactjs-test.cloudfunctions.net/app/api/users')
+    .then(response=>{
+      if(response.ok){
+        response.json().then(users=>setUsers(users))
+      }else{
+        response.json().then(error=>console.log(error))
+      }
+    })
+  },[])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Routes>
+      <Route exact path='/' element={<Home users={users}/>}/>
+      <Route exact path='/users/:id' element = {<UserDetails users={users} setUsers={setUsers}/>}/>
+     </Routes>
     </div>
   );
 }
