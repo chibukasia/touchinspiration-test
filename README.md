@@ -16,7 +16,7 @@
 ### List of users
 ![Users](./src/images/users.png)
 ### Pagination
-![Pagination](./src/images/pagination.png
+![Pagination](./src/images/pagination.png)
 ### User Details
 ![User Details](./src/images/user_details.png)
 ### Updated user
